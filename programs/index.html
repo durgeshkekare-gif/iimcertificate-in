@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>All IIM & XLRI Certificate Programs 2026 | Browse by Institution | iimcertificate.in</title>
+<meta name="description" content="Browse all 16 IIM and XLRI certificate programs for working professionals 2026 — grouped by institution, with fees, duration and eligibility at a glance.">
+<link rel="canonical" href="https://iimcertificate.in/programs/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+/* Filter bar */
+.filter-bar{background:var(--white);border-bottom:1px solid var(--border);padding:1rem 5%;display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;position:sticky;top:68px;z-index:100;}
+.filter-label{font-size:0.72rem;font-weight:700;color:var(--text-muted);margin-right:0.25rem;text-transform:uppercase;letter-spacing:0.08em;}
+.filter-btn{padding:0.35rem 0.875rem;border-radius:20px;font-size:0.75rem;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-muted);cursor:pointer;transition:all 0.15s;font-family:var(--font-body);}
+.filter-btn:hover,.filter-btn.active{background:var(--charcoal);color:var(--white);border-color:var(--charcoal);}
+.filter-btn.active-red{background:var(--iim-red);color:var(--white);border-color:var(--iim-red);}
+
+/* Programs layout */
+.programs-wrap{max-width:1200px;margin:0 auto;padding:48px 5%;}
+.inst-section{margin-bottom:3.5rem;}
+.inst-section[data-hide="1"]{display:none;}
+
+/* Institution header */
+.inst-hdr{display:flex;align-items:center;justify-content:space-between;padding-bottom:1rem;margin-bottom:1.5rem;border-bottom:2px solid var(--off-white);}
+.inst-hdr-left{display:flex;align-items:center;gap:1rem;}
+.inst-hdr-icon{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--charcoal),var(--charcoal-light));display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold-light);font-family:var(--font-head);font-weight:700;font-size:0.8rem;}
+.inst-hdr-name{font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--charcoal);}
+.inst-hdr-name a{color:inherit;transition:color 0.2s;}
+.inst-hdr-name a:hover{color:var(--iim-red);}
+.inst-hdr-meta{font-size:0.72rem;color:var(--text-muted);margin-top:0.15rem;}
+.inst-hdr-nirf{font-size:0.68rem;font-weight:700;background:var(--gold-pale);border:1px solid rgba(212,160,23,0.2);color:var(--gold);padding:0.25rem 0.65rem;border-radius:3px;}
+
+/* Program cards grid */
+.prog-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem;}
+.pc2{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;}
+.pc2:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.pc2-body{padding:1.25rem 1.25rem 0;flex:1;}
+.pc2-cat{font-size:0.63rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--iim-red);margin-bottom:0.3rem;}
+.pc2-title{font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--charcoal);line-height:1.4;margin-bottom:0.75rem;}
+.pc2-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.875rem;}
+.pc2-tag{font-size:0.62rem;padding:0.15rem 0.5rem;border-radius:3px;background:var(--surface);border:1px solid var(--border);color:var(--text-muted);}
+.pc2-stats{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);}
+.pc2-stat{padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);}
+.pc2-stat:last-child{border-right:none;}
+.pc2-stat .sv{font-size:0.82rem;font-weight:700;color:var(--charcoal);}
+.pc2-stat .sl{font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;}
+.pc2-foot{padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.pc2-cred{font-size:0.68rem;color:var(--gold);font-weight:600;max-width:55%;}
+
+/* Result count */
+.results-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;}
+.results-count{font-size:0.82rem;color:var(--text-muted);}
+.results-count strong{color:var(--charcoal);}
+
+/* Compare CTA strip */
+.cmp-strip{background:var(--charcoal);border-radius:var(--radius-lg);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin-top:2rem;flex-wrap:wrap;}
+.cmp-strip p{font-size:0.875rem;color:rgba(255,255,255,0.65);margin:0;}
+.cmp-strip strong{color:var(--white);}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span>IIM</span> Certificate<em>.in</em></a>
+  <ul class="nav-links">
+    <li><a href="/institutions/">Institutions</a></li>
+    <li><a href="/programs/" class="active">All Programs</a></li>
+    <li><a href="/compare.html">Compare</a></li>
+    <li><a href="/eligibility.html">Eligibility</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <a href="/apply.html" class="nav-cta">Free counselling</a>
+  <button class="nav-hamburger">&#9776;</button>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="eyebrow">16 programs &middot; 8 institutions &middot; 2026</div>
+  <h1 class="page-title">Browse all IIM &amp; XLRI programs</h1>
+  <p class="page-sub">All certificate programs for working professionals — grouped by institution. No CAT required.</p>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" onclick="filterAll(this)">All 16</button>
+  <button class="filter-btn" onclick="filterDur('short',this)">6 months or less</button>
+  <button class="filter-btn" onclick="filterDur('year',this)">1 year</button>
+  <button class="filter-btn" onclick="filterFee('budget',this)">Under ₹3L</button>
+  <button class="filter-btn" onclick="filterFee('premium',this)">₹5L+</button>
+  <button class="filter-btn" onclick="filterFocus('leadership',this)">Leadership</button>
+  <button class="filter-btn" onclick="filterFocus('finance',this)">Finance / BFSI</button>
+  <button class="filter-btn" onclick="filterFocus('product',this)">Product / Tech</button>
+  <button class="filter-btn" onclick="filterFocus('hr',this)">HR</button>
+</div>
+
+<div class="programs-wrap">
+  <div class="results-bar">
+    <div class="results-count">Showing <strong id="prog-count">16</strong> programs</div>
+    <a href="/compare.html" style="font-size:0.78rem;font-weight:600;color:var(--iim-red);">Side-by-side comparison &rarr;</a>
+  </div>
+
+  <!-- IIM AHMEDABAD -->
+  <div class="inst-section" id="sec-iima" data-inst="iima">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">IIMA</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/iima/">IIM Ahmedabad</a></div>
+          <div class="inst-hdr-meta">Ahmedabad, Gujarat &middot; Est. 1961 &middot; AACSB &middot; EQUIS</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf">&#11088; NIRF #1</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="long" data-fee="premium" data-focus="leadership general">
+        <div class="pc2-body">
+          <div class="pc2-cat">General Management</div>
+          <div class="pc2-title">Accelerated General Management Programme</div>
+          <div class="pc2-tags"><span class="pc2-tag">Strategy</span><span class="pc2-tag">Finance</span><span class="pc2-tag">Operations</span><span class="pc2-tag">Leadership</span><span class="pc2-tag">Marketing</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">&#8377;8L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">Mid-senior</div><div class="sl">Level</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIM-A Certificate + Alumni status</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iima-agmp" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iima/#agmp" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="short" data-fee="premium" data-focus="product tech leadership">
+        <div class="pc2-body">
+          <div class="pc2-cat">IT Leadership</div>
+          <div class="pc2-title">IT Management: Strategic Business Leadership — Future CIO/CTO</div>
+          <div class="pc2-tags"><span class="pc2-tag">CIO/CTO Track</span><span class="pc2-tag">Digital Strategy</span><span class="pc2-tag">Tech Management</span><span class="pc2-tag">C-Suite</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">4 Months</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">&#8377;4L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">10+ yrs IT</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIM-A Certificate</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iima-cio" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iima/#cio" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IIM KOZHIKODE -->
+  <div class="inst-section" id="sec-iimk" data-inst="iimk">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">IIMK</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/iimk/">IIM Kozhikode</a></div>
+          <div class="inst-hdr-meta">Kozhikode, Kerala &middot; Est. 1997 &middot; AACSB</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf">&#11088; NIRF #10</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="long" data-fee="premium" data-focus="leadership general">
+        <div class="pc2-body">
+          <div class="pc2-cat">Executive MBA</div>
+          <div class="pc2-title">New Age Management Programme for Senior Professionals</div>
+          <div class="pc2-tags"><span class="pc2-tag">Senior Leadership</span><span class="pc2-tag">General Management</span><span class="pc2-tag">Digital Transformation</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;5–6L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">10+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIMK Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimk-emba" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimk/#emba" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="long" data-fee="budget" data-focus="leadership general">
+        <div class="pc2-body">
+          <div class="pc2-cat">Strategic Management</div>
+          <div class="pc2-title">Professional Certificate Programme in Strategic Management</div>
+          <div class="pc2-tags"><span class="pc2-tag">Business Strategy</span><span class="pc2-tag">Competitive Strategy</span><span class="pc2-tag">Leadership</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">&#8377;1.95L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">Any exp</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIMK Professional Certificate</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimk-strategy" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimk/#strategy" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="short" data-fee="budget" data-focus="finance">
+        <div class="pc2-body">
+          <div class="pc2-cat">Finance / BFSI</div>
+          <div class="pc2-title">Professional Certificate Programme in Investment Banking</div>
+          <div class="pc2-tags"><span class="pc2-tag">Investment Banking</span><span class="pc2-tag">Capital Markets</span><span class="pc2-tag">Valuation</span><span class="pc2-tag">M&amp;A</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">6 Months</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">&#8377;2.4L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">Finance</div><div class="sl">Background</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIMK Professional Certificate</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimk-ib" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimk/#ib" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IIM INDORE -->
+  <div class="inst-section" id="sec-iimi" data-inst="iimi">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">IIMI</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/iimi/">IIM Indore</a></div>
+          <div class="inst-hdr-meta">Indore, Madhya Pradesh &middot; Est. 1996 &middot; AACSB</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf">&#11088; NIRF #7</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="long" data-fee="budget" data-focus="leadership general">
+        <div class="pc2-body">
+          <div class="pc2-cat">Leadership</div>
+          <div class="pc2-title">Corporate &amp; Public Leadership in a VUCA World</div>
+          <div class="pc2-tags"><span class="pc2-tag">Leadership</span><span class="pc2-tag">VUCA</span><span class="pc2-tag">Strategic Planning</span><span class="pc2-tag">Public Sector</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;3–4L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">5+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIM Indore Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimi-vuca" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimi/#vuca" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="long" data-fee="premium" data-focus="product tech">
+        <div class="pc2-body">
+          <div class="pc2-cat">Product Management</div>
+          <div class="pc2-title">Chief Product Officer Programme (CPOP)</div>
+          <div class="pc2-tags"><span class="pc2-tag">CPO Track</span><span class="pc2-tag">Product Strategy</span><span class="pc2-tag">Innovation</span><span class="pc2-tag">8+ yrs</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;4–5L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">8+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIM Indore Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimi-cpop" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimi/#cpop" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="short" data-fee="budget" data-focus="product general">
+        <div class="pc2-body">
+          <div class="pc2-cat">Innovation</div>
+          <div class="pc2-title">Certificate Programme in Design Thinking &amp; Innovation</div>
+          <div class="pc2-tags"><span class="pc2-tag">Design Thinking</span><span class="pc2-tag">Innovation</span><span class="pc2-tag">Business Excellence</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">6 Months</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;2–2.5L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">3+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIM Indore Certificate</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimi-design" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimi/#design" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IIM MUMBAI -->
+  <div class="inst-section" id="sec-iimm" data-inst="iimm">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">IIMM</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/iimm/">IIM Mumbai</a></div>
+          <div class="inst-hdr-meta">Powai, Mumbai &middot; Formerly NITIE &middot; AACSB &middot; AMBA</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf">&#11088; NIRF #6</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="short" data-fee="budget" data-focus="finance">
+        <div class="pc2-body">
+          <div class="pc2-cat">Finance</div>
+          <div class="pc2-title">Executive Certificate Programme in Corporate &amp; Strategic Finance</div>
+          <div class="pc2-tags"><span class="pc2-tag">Corporate Finance</span><span class="pc2-tag">Strategic Finance</span><span class="pc2-tag">CFO Track</span><span class="pc2-tag">Valuation</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">6 Months</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;2–3L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">3+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; IIM Mumbai Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimm-finance" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimm/#finance" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IIM NAGPUR -->
+  <div class="inst-section" id="sec-iimn" data-inst="iimn">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">IIMN</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/iimn/">IIM Nagpur</a></div>
+          <div class="inst-hdr-meta">Nagpur, Maharashtra &middot; Est. 2015 &middot; IIM Act 2017</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf" style="background:rgba(255,255,255,0.05);border-color:rgba(212,160,23,0.15);">Newer IIM</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="long" data-fee="premium" data-focus="general leadership">
+        <div class="pc2-body">
+          <div class="pc2-cat" style="color:var(--gold);">&#127942; Full MBA Degree — unique in India</div>
+          <div class="pc2-title">Blended MBA for Working Professionals</div>
+          <div class="pc2-tags"><span class="pc2-tag">MBA Degree</span><span class="pc2-tag">Blended</span><span class="pc2-tag">Weekend campus</span><span class="pc2-tag">IIM degree</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">2 Years</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;12–15L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">3+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127891; Full MBA Degree from IIM Nagpur</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimn-mba" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimn/#mba" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="long" data-fee="budget" data-focus="general leadership">
+        <div class="pc2-body">
+          <div class="pc2-cat">General Management</div>
+          <div class="pc2-title">PG Certificate Programme in General Management</div>
+          <div class="pc2-tags"><span class="pc2-tag">General Management</span><span class="pc2-tag">Leadership</span><span class="pc2-tag">Strategy</span><span class="pc2-tag">Operations</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">&#8377;3.25L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">3+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; PG Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimn-gm" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimn/#gm" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IIM TRICHY -->
+  <div class="inst-section" id="sec-iimt" data-inst="iimt">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">IIMT</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/iimt/">IIM Trichy</a></div>
+          <div class="inst-hdr-meta">Tiruchirappalli, Tamil Nadu &middot; Est. 2011 &middot; 175-acre campus</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf">&#11088; NIRF #18</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="long" data-fee="budget" data-focus="leadership general">
+        <div class="pc2-body">
+          <div class="pc2-cat">Senior Management</div>
+          <div class="pc2-title">Post Graduate Certificate in Senior Management Programme</div>
+          <div class="pc2-tags"><span class="pc2-tag">Senior Management</span><span class="pc2-tag">Leadership</span><span class="pc2-tag">Analytics</span><span class="pc2-tag">10+ yrs required</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">&#8377;3.6L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">10+ yrs</div><div class="sl">Mandatory</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; PG Cert. SMP + Executive Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimt-smp" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimt/#smp" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="long" data-fee="budget" data-focus="finance general">
+        <div class="pc2-body">
+          <div class="pc2-cat">Executive General Management</div>
+          <div class="pc2-title">Post Graduate Certificate in Executive General Management (e-GMP)</div>
+          <div class="pc2-tags"><span class="pc2-tag">General Management</span><span class="pc2-tag">Finance</span><span class="pc2-tag">Marketing</span><span class="pc2-tag">Analytics</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;3–4L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">Mid-level</div><div class="sl">Level</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; PG Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimt-egmp" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimt/#egmp" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IIM VISAKHAPATNAM -->
+  <div class="inst-section" id="sec-iimv" data-inst="iimv">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">IIMV</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/iimv/">IIM Visakhapatnam</a></div>
+          <div class="inst-hdr-meta">Visakhapatnam, Andhra Pradesh &middot; Est. 2015</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf" style="background:rgba(255,255,255,0.05);border-color:rgba(212,160,23,0.15);">Newer IIM</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="long" data-fee="budget" data-focus="general leadership">
+        <div class="pc2-body">
+          <div class="pc2-cat">General Management</div>
+          <div class="pc2-title">Executive Post Graduate Certificate in General Management</div>
+          <div class="pc2-tags"><span class="pc2-tag">General Management</span><span class="pc2-tag">Leadership</span><span class="pc2-tag">Strategy</span><span class="pc2-tag">Decision Making</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">1 Year</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;2.5–3.5L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">3+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; Exec PG Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=iimv-gm" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/iimv/#gm" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- XLRI -->
+  <div class="inst-section" id="sec-xlri" data-inst="xlri">
+    <div class="inst-hdr">
+      <div class="inst-hdr-left">
+        <div class="inst-hdr-icon">XLRI</div>
+        <div>
+          <div class="inst-hdr-name"><a href="/institutions/xlri/">XLRI Jamshedpur</a></div>
+          <div class="inst-hdr-meta">Jamshedpur, Jharkhand &middot; Est. 1949 &middot; AACSB &middot; AMBA &middot; FT #83</div>
+        </div>
+      </div>
+      <span class="inst-hdr-nirf">&#11088; NIRF #10 &middot; FT #83</span>
+    </div>
+    <div class="prog-cards">
+      <div class="pc2" data-dur="short" data-fee="budget" data-focus="leadership general">
+        <div class="pc2-body">
+          <div class="pc2-cat">C-Suite Leadership</div>
+          <div class="pc2-title">Senior Executive Programme in Transformational Leadership for CXOs</div>
+          <div class="pc2-tags"><span class="pc2-tag">CXO Leadership</span><span class="pc2-tag">Transformational</span><span class="pc2-tag">C-Suite</span><span class="pc2-tag">Ethics</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">8 Months</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;3–4L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">10+ yrs</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; XLRI Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=xlri-cxo" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/xlri/#cxo" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="pc2" data-dur="short" data-fee="budget" data-focus="hr">
+        <div class="pc2-body">
+          <div class="pc2-cat">Human Resources</div>
+          <div class="pc2-title">Programme in Digital HR Transformation &amp; Analytics</div>
+          <div class="pc2-tags"><span class="pc2-tag">Digital HR</span><span class="pc2-tag">HR Analytics</span><span class="pc2-tag">People Analytics</span><span class="pc2-tag">CHRO Track</span></div>
+        </div>
+        <div class="pc2-stats">
+          <div class="pc2-stat"><div class="sv">8 Months</div><div class="sl">Duration</div></div>
+          <div class="pc2-stat"><div class="sv">~&#8377;2.5–3.5L</div><div class="sl">Fee + GST</div></div>
+          <div class="pc2-stat"><div class="sv">5+ yrs HR</div><div class="sl">Experience</div></div>
+        </div>
+        <div class="pc2-foot">
+          <span class="pc2-cred">&#127942; XLRI Certificate + Alumni</span>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="/apply.html?p=xlri-hr" class="btn btn-red btn-sm">Enquire</a>
+            <a href="/institutions/xlri/#hr" class="btn btn-outline btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compare CTA -->
+  <div class="cmp-strip">
+    <div>
+      <strong>Want a side-by-side comparison?</strong>
+      <p>The Compare page shows all 16 programs in one table — fees, duration, experience and format.</p>
+    </div>
+    <a href="/compare.html" class="btn btn-gold">Compare all programs &rarr;</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="footer-logo"><span>IIM</span> Certificate.in</div><p>India's most complete guide to IIM and XLRI executive certificate programs.</p></div>
+    <div class="footer-col"><div class="footer-col-title">Institutions</div><ul>
+      <li><a href="/institutions/iima/">IIM Ahmedabad</a></li><li><a href="/institutions/iimk/">IIM Kozhikode</a></li>
+      <li><a href="/institutions/iimi/">IIM Indore</a></li><li><a href="/institutions/iimm/">IIM Mumbai</a></li>
+      <li><a href="/institutions/iimn/">IIM Nagpur</a></li><li><a href="/institutions/iimt/">IIM Trichy</a></li>
+      <li><a href="/institutions/iimv/">IIM Visakhapatnam</a></li><li><a href="/institutions/xlri/">XLRI Jamshedpur</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="footer-col-title">Tools</div><ul>
+      <li><a href="/compare.html">Compare programs</a></li>
+      <li><a href="/eligibility.html">Eligibility check</a></li>
+      <li><a href="/apply.html">Free counselling</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="footer-col-title">Blog</div><ul>
+      <li><a href="/blog/">All articles</a></li>
+      <li><a href="/blog/iim-certificate-programs-guide-2026.html">Complete guide</a></li>
+      <li><a href="/blog/iim-certificate-salary-impact.html">Salary impact</a></li>
+      <li><a href="/blog/xlri-vs-iim-certificate.html">XLRI vs IIM</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 iimcertificate.in</div>
+    <div class="footer-bottom-links"><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a></div>
+  </div>
+</footer>
+<div class="sticky-mobile"><a href="tel:+918080089898" class="sm-call">&#128222; Call</a><a href="/apply.html" class="sm-apply">Free counselling &rarr;</a></div>
+
+<script src="/assets/main.js"></script>
+<script>
+const allCards = document.querySelectorAll('.pc2');
+const allSections = document.querySelectorAll('.inst-section');
+
+function updateCount() {
+  const visible = document.querySelectorAll('.pc2:not([style*="display: none"]):not([style*="display:none"])').length;
+  document.getElementById('prog-count').textContent = visible;
+}
+
+function clearActive() {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+}
+
+function filterAll(btn) {
+  clearActive(); btn.classList.add('active');
+  allCards.forEach(c => c.style.display = '');
+  allSections.forEach(s => { s.style.display = ''; s.removeAttribute('data-hide'); });
+  updateCount();
+}
+
+function filterDur(type, btn) {
+  clearActive(); btn.classList.add('active');
+  allCards.forEach(c => {
+    const show = type === 'short' ? c.dataset.dur === 'short' : c.dataset.dur !== 'short';
+    c.style.display = show ? '' : 'none';
+  });
+  checkEmptySections(); updateCount();
+}
+
+function filterFee(type, btn) {
+  clearActive(); btn.classList.add('active');
+  allCards.forEach(c => {
+    const show = type === 'budget' ? c.dataset.fee === 'budget' : c.dataset.fee === 'premium';
+    c.style.display = show ? '' : 'none';
+  });
+  checkEmptySections(); updateCount();
+}
+
+function filterFocus(focus, btn) {
+  clearActive(); btn.classList.add('active');
+  allCards.forEach(c => {
+    c.style.display = (c.dataset.focus||'').includes(focus) ? '' : 'none';
+  });
+  checkEmptySections(); updateCount();
+}
+
+function checkEmptySections() {
+  allSections.forEach(sec => {
+    const visible = sec.querySelectorAll('.pc2:not([style*="display: none"]):not([style*="display:none"])').length;
+    sec.style.display = visible === 0 ? 'none' : '';
+  });
+}
+</script>
+</body>
+</html>
