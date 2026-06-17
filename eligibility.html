@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IIM Certificate Eligibility Check 2026 | iimcertificate.in</title>
+<meta name="description" content="Check your eligibility for IIM and XLRI certificate programs. Answer 3 questions and get matched to the right program in 60 seconds.">
+<link rel="canonical" href="https://iimcertificate.in/eligibility.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+.elig-wrap{max-width:760px;margin:0 auto;padding:56px 5%;}
+.elig-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);padding:2.5rem;box-shadow:var(--shadow-sm);}
+.prog-bar{height:3px;background:var(--border);border-radius:2px;margin-bottom:2rem;}
+.prog-fill{height:3px;background:var(--iim-red);border-radius:2px;transition:width 0.3s;}
+.q-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--iim-red);margin-bottom:0.875rem;}
+.q-text{font-family:var(--font-head);font-size:1.15rem;font-weight:700;color:var(--charcoal);margin-bottom:1.5rem;line-height:1.4;}
+.opts{display:flex;flex-direction:column;gap:0.6rem;}
+.opt{padding:0.875rem 1.25rem;border:1.5px solid var(--border);border-radius:8px;font-size:0.88rem;color:var(--text);cursor:pointer;transition:all 0.2s;text-align:left;background:var(--white);font-family:var(--font-body);display:flex;align-items:center;gap:0.75rem;}
+.opt:hover,.opt.sel{border-color:var(--charcoal);background:var(--surface);font-weight:600;}
+.result{display:none;text-align:center;padding:1rem 0;}
+.r-badge{display:inline-block;background:var(--iim-red);color:var(--white);padding:0.35rem 1.25rem;border-radius:3px;font-size:0.75rem;font-weight:700;margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:0.06em;}
+.r-prog{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:var(--charcoal);margin-bottom:0.4rem;}
+.r-inst{font-size:0.875rem;color:var(--iim-red);font-weight:600;margin-bottom:0.4rem;}
+.r-fee{font-size:1rem;font-weight:700;color:var(--text-muted);margin-bottom:1.5rem;}
+.elig-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:2rem 0;}
+.elig-table th{background:var(--charcoal);color:var(--white);padding:0.75rem 1rem;text-align:left;font-weight:600;}
+.elig-table td{padding:0.75rem 1rem;border-bottom:1px solid var(--border);}
+.elig-table tr:nth-child(even) td{background:var(--off-white);}
+.yes{color:var(--success);font-weight:600;}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span>IIM</span> Certificate<em>.in</em></a>
+  <ul class="nav-links">
+    <li><a href="/institutions/" >Institutions</a></li>
+    <li><a href="/programs/" >All Programs</a></li>
+    <li><a href="/compare.html" >Compare</a></li>
+    <li><a href="/eligibility.html" class='active'>Eligibility</a></li>
+    <li><a href="/blog/" >Blog</a></li>
+  </ul>
+  <a href="/apply.html" class="nav-cta">Free counselling</a>
+  <button class="nav-hamburger">&#9776;</button>
+</nav>
+<div class="page-hero center" style="text-align:center;">
+  <div class="eyebrow">Instant eligibility check</div>
+  <h1 class="page-title">Am I eligible for an IIM certificate program?</h1>
+  <p class="page-sub" style="margin:0 auto;">Answer 3 questions — get matched to the right IIM program in 60 seconds.</p>
+</div>
+<div class="elig-wrap">
+  <div class="elig-card">
+    <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+    <div id="q1">
+      <div class="q-label">Question 1 of 3</div>
+      <div class="q-text">How many years of work experience do you have?</div>
+      <div class="opts">
+        <button class="opt" onclick="ans(1,'3to5',this)"><span>💼</span> 3–5 years</button>
+        <button class="opt" onclick="ans(1,'5to10',this)"><span>🏢</span> 5–10 years</button>
+        <button class="opt" onclick="ans(1,'10plus',this)"><span>👔</span> 10+ years (senior leader)</button>
+      </div>
+    </div>
+    <div id="q2" style="display:none">
+      <div class="q-label">Question 2 of 3</div>
+      <div class="q-text">What is your primary career focus?</div>
+      <div class="opts">
+        <button class="opt" onclick="ans(2,'gm',this)"><span>📊</span> General management / leadership</button>
+        <button class="opt" onclick="ans(2,'finance',this)"><span>💰</span> Finance / BFSI / investment banking</button>
+        <button class="opt" onclick="ans(2,'tech',this)"><span>💻</span> Technology / product / IT leadership</button>
+        <button class="opt" onclick="ans(2,'hr',this)"><span>👥</span> Human resources / people</button>
+      </div>
+    </div>
+    <div id="q3" style="display:none">
+      <div class="q-label">Question 3 of 3</div>
+      <div class="q-text">Which institution's credential is most important to you?</div>
+      <div class="opts">
+        <button class="opt" onclick="ans(3,'iima',this)"><span>🏛️</span> IIM Ahmedabad — India's #1</button>
+        <button class="opt" onclick="ans(3,'top10',this)"><span>⭐</span> Any top-10 IIM (Kozhikode, Indore, XLRI)</button>
+        <button class="opt" onclick="ans(3,'any',this)"><span>✅</span> Any IIM credential — best fit for my goals</button>
+      </div>
+    </div>
+    <div id="res" class="result">
+      <div class="r-badge">Your best match &#10003;</div>
+      <div class="r-prog" id="r-prog"></div>
+      <div class="r-inst" id="r-inst"></div>
+      <div class="r-fee" id="r-fee"></div>
+      <a href="/apply.html" class="btn btn-red btn-lg" style="display:block;width:100%;text-align:center;margin-bottom:0.875rem;">Get free admission counselling &rarr;</a>
+      <button onclick="reset()" style="background:none;border:none;color:var(--iim-red);cursor:pointer;font-size:0.82rem;font-weight:600;font-family:var(--font-body);">&larr; Start over</button>
+    </div>
+  </div>
+
+  <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--charcoal);margin:3rem 0 1rem;">Eligibility at a glance</h2>
+  <table class="elig-table">
+    <thead><tr><th>Institution</th><th>Program</th><th>Min. experience</th><th>Entrance exam</th></tr></thead>
+    <tbody>
+      <tr><td><strong>IIM Ahmedabad</strong></td><td>Accelerated GMP</td><td>10+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Ahmedabad</strong></td><td>Future CIO/CTO</td><td>10+ years (IT)</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Kozhikode</strong></td><td>Executive MBA</td><td>5+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Kozhikode</strong></td><td>Strategic Management</td><td>3+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Kozhikode</strong></td><td>Investment Banking</td><td>Finance background</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Indore</strong></td><td>VUCA Leadership</td><td>5+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Indore</strong></td><td>Chief Product Officer</td><td>8+ years (Product)</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Indore</strong></td><td>Design Thinking</td><td>3+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Mumbai</strong></td><td>Corporate Finance</td><td>3+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Nagpur</strong></td><td>Blended MBA</td><td>3+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Nagpur</strong></td><td>PG Cert. Gen. Mgmt</td><td>3+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Trichy</strong></td><td>Senior Management</td><td>5+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Trichy</strong></td><td>Banking &amp; Finance</td><td>BFSI background</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>IIM Visakhapatnam</strong></td><td>Executive Cert. GM</td><td>3+ years</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>XLRI Jamshedpur</strong></td><td>CXO Leadership</td><td>10+ years (C-Suite)</td><td class="yes">None &#10003;</td></tr>
+      <tr><td><strong>XLRI Jamshedpur</strong></td><td>Digital HR Analytics</td><td>5+ years (HR)</td><td class="yes">None &#10003;</td></tr>
+    </tbody>
+  </table>
+</div>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="footer-logo"><span>IIM</span> Certificate.in</div><p>India's most complete guide to IIM and XLRI executive certificate programs — independent, updated 2026.</p></div>
+    <div class="footer-col"><div class="footer-col-title">Institutions</div><ul>
+      <li><a href="/institutions/iima/">IIM Ahmedabad</a></li><li><a href="/institutions/iimk/">IIM Kozhikode</a></li>
+      <li><a href="/institutions/iimi/">IIM Indore</a></li><li><a href="/institutions/iimm/">IIM Mumbai</a></li>
+      <li><a href="/institutions/iimn/">IIM Nagpur</a></li><li><a href="/institutions/iimt/">IIM Trichy</a></li>
+      <li><a href="/institutions/iimv/">IIM Visakhapatnam</a></li><li><a href="/institutions/xlri/">XLRI Jamshedpur</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="footer-col-title">Programs</div><ul>
+      <li><a href="/programs/">All programs</a></li>
+      <li><a href="/programs/general-management/">General Management</a></li>
+      <li><a href="/programs/leadership/">Leadership</a></li>
+      <li><a href="/programs/finance/">Finance</a></li>
+      <li><a href="/programs/hr/">Human Resources</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="footer-col-title">Tools</div><ul>
+      <li><a href="/compare.html">Compare</a></li>
+      <li><a href="/eligibility.html">Eligibility</a></li>
+      <li><a href="/apply.html">Free counselling</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="footer-col-title">Blog</div><ul>
+      <li><a href="/blog/">All articles</a></li>
+      <li><a href="/blog/iim-certificate-programs-guide-2026.html">IIM programs guide</a></li>
+      <li><a href="/blog/iim-certificate-salary-impact.html">Salary impact</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 iimcertificate.in &middot; All rights reserved</div>
+    <div class="footer-bottom-links"><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a></div>
+  </div>
+</footer>
+<div class="sticky-mobile"><a href="tel:+918080089898" class="sm-call">&#128222; Call</a><a href="/apply.html" class="sm-apply">Free counselling &rarr;</a></div>
+<script src="/assets/main.js"></script>
+<script>
+var a={};
+function ans(q,v,btn){a['q'+q]=v;btn.classList.add('sel');document.getElementById('pf').style.width=(q/3*100)+'%';setTimeout(function(){document.getElementById('q'+q).style.display='none';if(q<3)document.getElementById('q'+(q+1)).style.display='block';else show();},300);}
+function show(){var exp=a.q1,focus=a.q2,inst=a.q3;var prog,institution,fee;
+if(focus==='finance'&&exp==='3to5'){prog='Executive Certificate in Corporate & Strategic Finance';institution='IIM Mumbai';fee='~₹2–3L + GST';}
+else if(focus==='finance'){prog='Professional Certificate in Investment Banking';institution='IIM Kozhikode';fee='~₹2–2.5L + GST';}
+else if(focus==='tech'&&inst==='iima'){prog='IT Management: Strategic Business Leadership — Future CIO/CTO';institution='IIM Ahmedabad';fee='~₹5.5L + GST';}
+else if(focus==='tech'){prog='Chief Product Officer Programme (CPOP)';institution='IIM Indore';fee='~₹4–5L + GST';}
+else if(focus==='hr'){prog='Digital HR Transformation & Analytics';institution='XLRI Jamshedpur';fee='~₹2.5–3.5L + GST';}
+else if(exp==='10plus'&&inst==='iima'){prog='Accelerated General Management Programme';institution='IIM Ahmedabad';fee='~₹8L + GST';}
+else if(exp==='10plus'){prog='Transformational Leadership for CXOs';institution='XLRI Jamshedpur';fee='~₹3–4L + GST';}
+else if(exp==='5to10'){prog='Executive MBA — Senior Leadership Programme';institution='IIM Kozhikode';fee='~₹5–6L + GST';}
+else{prog='PG Certificate in General Management';institution='IIM Nagpur';fee='~₹3–4L + GST';}
+document.getElementById('r-prog').textContent=prog;document.getElementById('r-inst').textContent=institution;document.getElementById('r-fee').textContent=fee;document.getElementById('pf').style.width='100%';document.getElementById('res').style.display='block';}
+function reset(){a={};['q1','q2','q3'].forEach(function(id,i){var el=document.getElementById(id);if(el){el.style.display=i===0?'block':'none';el.querySelectorAll('.opt').forEach(function(b){b.classList.remove('sel');});}});document.getElementById('res').style.display='none';document.getElementById('pf').style.width='0%';}
+</script>
+</body></html>
