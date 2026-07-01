@@ -56,20 +56,20 @@
       <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1.5rem;">We call you within 2 hours with a personalised recommendation.</p>
       <form onsubmit="submitLead(event,'form-wrap','success')">
         <div class="form-row">
-          <div class="form-group"><label>First name *</label><input type="text" required placeholder="Rahul"></div>
-          <div class="form-group"><label>Last name *</label><input type="text" required placeholder="Sharma"></div>
+          <div class="form-group"><label>First name *</label><input type="text" required placeholder="Rahul" name="firstName"></div>
+          <div class="form-group"><label>Last name *</label><input type="text" required placeholder="Sharma" name="lastName"></div>
         </div>
-        <div class="form-group"><label>Mobile *</label><input type="tel" required placeholder="+91 98765 43210"></div>
-        <div class="form-group"><label>Email *</label><input type="email" required placeholder="rahul@company.com"></div>
-        <div class="form-group"><label>Current designation</label><input type="text" placeholder="VP / Director / Manager"></div>
+        <div class="form-group"><label>Mobile *</label><input type="tel" required placeholder="+91 98765 43210" name="mobile"></div>
+        <div class="form-group"><label>Email *</label><input type="email" required placeholder="rahul@company.com" name="email"></div>
+        <div class="form-group"><label>Current designation</label><input type="text" placeholder="VP / Director / Manager" name="role"></div>
         <div class="form-group"><label>Work experience *</label>
-          <select required>
+          <select name="experience" required>
             <option value="">Select</option>
             <option>3–5 years</option><option>5–10 years</option><option>10+ years</option>
           </select>
         </div>
         <div class="form-group"><label>Program of interest</label>
-          <select>
+          <select name="experience">
             <option value="">Not sure — need guidance</option>
             <option>IIM Ahmedabad — Accelerated GMP</option>
             <option>IIM Ahmedabad — Future CIO/CTO</option>
