@@ -61,5 +61,12 @@
     }
   },
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "https://www.iimcertificate.in/:path*",
+      "destination": "https://iimcertificate.in/:path*",
+      "permanent": true
+    }
+  ]
 }
