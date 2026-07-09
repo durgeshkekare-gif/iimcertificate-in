@@ -64,7 +64,13 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "https://www.iimcertificate.in/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.iimcertificate.in"
+        }
+      ],
       "destination": "https://iimcertificate.in/:path*",
       "permanent": true
     }
