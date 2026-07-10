@@ -52,6 +52,10 @@
     {
       "source": "/institutions/:slug",
       "destination": "/institutions/:slug/index.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug.html"
     }
   ],
   "functions": {
