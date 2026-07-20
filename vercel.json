@@ -65,18 +65,5 @@
     }
   },
   "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/((?!assets/|api/|favicon|robots|sitemap).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.iimcertificate.in"
-        }
-      ],
-      "destination": "https://iimcertificate.in/:path*",
-      "permanent": true
-    }
-  ]
+  "trailingSlash": false
 }
